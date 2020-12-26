@@ -24,7 +24,16 @@ class CrudController extends DatabaseConnection{
 
   public function getStockItems()
   {
+    $sql = "SELECT * FROM Stock INNER JOIN Vehicle ON Stock.model_id = Vehicle.model_id";
+    $result = $this->openConnection()->query($sql);
+    $num_rows = $result->rowCount();
 
+    if ($num_rows > 0){
+      while ($row = $result->fetch(PDO::FETCH_ASSOC)){
+        $data[] = $row;
+      }
+      return $data;
+    }
   }
 
   public function createStockItems()

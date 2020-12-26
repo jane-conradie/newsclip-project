@@ -1,6 +1,7 @@
 <?php
   include "controllers/db_connection.php";
   include "controllers/crud.php";
+  include "views/viewStock.php";
 ?>
 
 
@@ -32,15 +33,17 @@
     </form>";
 
     if (isset($_POST['submit'])){
-
       $make = $_POST['make'];
       $model = $_POST['model'];
       $price = $_POST['price'];
       $features = $_POST['features'];
 
       $conn->createVehicleItem($make, $model, $price, $features);
-      $conn->closeConnection($conn);
     }
+
+    $stock = new ViewStock();
+    $stock->showStockItems();
+    $stock->closeConnection($stock);
 
     ?>
   </body>

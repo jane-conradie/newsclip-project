@@ -28,6 +28,7 @@
     $vehicle = new ViewVehicles();
     $vehicle->showVehicleItems();
     $vehicle->closeConnection($vehicle);
+
      ?>
 
     <a href="modify.php">Modify</a>
