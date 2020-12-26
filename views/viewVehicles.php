@@ -6,10 +6,14 @@ class ViewVehicles extends CrudController{
   {
     $data = $this->getVehicleItems();
     foreach ($data as $item) {
-      echo $data['make_name']."<br>";
-      echo $data['model_name']."<br>";
+      print_r($item['model_id']." "
+              .$item['make_name']." "
+              .$item['model_name']." "
+              .$item['vehicle_price']." "
+              .$item['vehicle_features']."<br><br>");
     }
   }
+
 }
 
  ?>

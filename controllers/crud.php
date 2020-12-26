@@ -16,6 +16,12 @@ class CrudController extends DatabaseConnection{
         }
   }
 
+  public function createVehicleItem($make, $model, $price, $features)
+  {
+      $sql = "INSERT INTO Vehicle (make_name, model_name, vehicle_price, vehicle_features) VALUES ('{$make}','{$model}','{$price}','{$features}')";
+      $result = $this->openConnection()->query($sql);
+  }
+
   public function getStockItems()
   {
 

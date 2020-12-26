@@ -27,10 +27,10 @@
 
     $vehicle = new ViewVehicles();
     $vehicle->showVehicleItems();
-
+    $vehicle->closeConnection($vehicle);
      ?>
 
-    <a href="views/modify.php">Modify</a>
+    <a href="modify.php">Modify</a>
 
   </body>
 </html>
