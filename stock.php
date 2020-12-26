@@ -1,3 +1,11 @@
+<?php
+
+  include "controllers/db_connection.php";
+  include "controllers/crud.php";
+  include "views/viewVehicles.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -15,9 +23,13 @@
 
     </div>
 
-    welcome
+    <?php
 
-    <a href="views/stock.php">Stock</a>
+    $vehicle = new ViewVehicles();
+    $vehicle->showVehicleItems();
+
+     ?>
+
     <a href="views/modify.php">Modify</a>
 
   </body>
