@@ -1,3 +1,10 @@
+<?php
+
+  include "controllers/db_connection.php";
+  include "controllers/crud.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,22 +12,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   </head>
   <body>
+    <?php
 
-    <div class="nav">
+    $db = new CrudController();
+    $db->populateDatabase();
+    $db->closeConnection($db);
 
-    </div>
+     ?>
+     <div class="container">
+       <div class="sidenav">
+         <img class="nav-logo" src="models/logo.png" alt="logo">
+         <div class="sidenav-links">
+           <a href="../stock.php">Stock Overview</a>
+           <a href="../modify.php">Modify Stock</a>
+         </div>
+         <div class="footer-icons">
+           <img src="models/fb.png" alt="fb">
+           <img src="models/li.png" alt="fb">
+           <img src="models/tw.png" alt="fb">
+         </div>
+       </div>
+     <div class="welcome">
+       <h1>Welcome!</h1>
+     </div>
+     <div class="home-links">
+       <a href="#"></a>
+     </div>
+   </div>
 
-    welcome
 
-    <a href="views/stock.php">Stock</a>
-    <a href="views/modify.php">Modify</a>
+        <a href="stock.php" role="button" class="btn">View Stock</a>
+
+
+        <a href="modify.php" role="button" class="btn">Modify Stock</a>
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

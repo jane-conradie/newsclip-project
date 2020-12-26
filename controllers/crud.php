@@ -2,9 +2,15 @@
 
 class CrudController extends DatabaseConnection{
 
+  public function populateDatabase()
+  {
+        $sql = 'CALL PopulateDatabase()';
+        $result = $this->openConnection()->query($sql);
+  }
+
   public function getVehicleItems()
   {
-        $sql = "SELECT * FROM Vehicle";
+        $sql = 'CALL GetVehicles()';
         $result = $this->openConnection()->query($sql);
         $num_rows = $result->rowCount();
 
@@ -18,13 +24,14 @@ class CrudController extends DatabaseConnection{
 
   public function createVehicleItem($make, $model, $price, $features)
   {
-      $sql = "INSERT INTO Vehicle (make_name, model_name, vehicle_price, vehicle_features) VALUES ('{$make}','{$model}','{$price}','{$features}')";
+      $sql = 'CALL CreateVehicleItem($make, $model,$price,$features)';
       $result = $this->openConnection()->query($sql);
+      return $result;
   }
 
   public function getStockItems()
   {
-    $sql = "SELECT * FROM Stock INNER JOIN Vehicle ON Stock.model_id = Vehicle.model_id";
+    $sql = 'CALL GetStock()';
     $result = $this->openConnection()->query($sql);
     $num_rows = $result->rowCount();
 
@@ -41,12 +48,18 @@ class CrudController extends DatabaseConnection{
 
   }
 
-  public function updateStockItems()
+
+  public function deleteStockItem()
   {
 
   }
 
-  public function deleteStockItems()
+  public function updateVehicleItem()
+  {
+
+  }
+
+  public function deleteVehicleItems()
   {
 
   }
