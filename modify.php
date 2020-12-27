@@ -18,8 +18,8 @@
 
     <h1>Stock</h1>
 
-    <!-- dropdown with model id -->
-    <!-- add and delete buttons for stock items -->
+    <a href="modules/createStock.php">Add Stock</a>
+    <a href="modules/deleteStock.php">Delete Stock</a>
 
     <h1>Vehicle</h1>
 

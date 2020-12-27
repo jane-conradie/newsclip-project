@@ -1,4 +1,3 @@
-<!-- form where dropdown model id fills out the rest of the info and allows you to edit it -->
 <?php
 
   include "../controllers/db_connection.php";

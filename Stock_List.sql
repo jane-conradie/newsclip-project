@@ -123,3 +123,31 @@ BEGIN
     END$$
     
 DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE AddStock(
+IN id INT(10)
+)
+BEGIN
+	INSERT INTO
+    Stock (model_id)
+	SELECT model_id
+    FROM Vehicle
+	WHERE model_id=id;
+    END$$
+    
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE RemoveStock(
+IN id INT(10)
+)
+BEGIN
+    DELETE FROM Stock
+	WHERE model_id=id
+    LIMIT 1;
+    END$$
+    
+DELIMITER ;
