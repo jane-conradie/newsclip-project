@@ -29,8 +29,8 @@
        <div class="sidenav">
          <img class="nav-logo" src="models/logo.png" alt="logo">
          <div class="sidenav-links">
-           <a href="../stock.php">Stock Overview</a>
-           <a href="../modify.php">Modify Stock</a>
+           <a href="stock.php">Stock Overview</a>
+           <a href="modify.php">Modify Stock</a>
          </div>
          <div class="footer-icons">
            <img src="models/fb.png" alt="fb">

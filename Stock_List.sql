@@ -110,3 +110,16 @@ BEGIN
     END$$
     
 DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE DeleteVehicleItem(
+IN id INT(10)
+)
+BEGIN
+	DELETE FROM 
+    Vehicle
+	WHERE model_id=id;
+    END$$
+    
+DELIMITER ;
