@@ -16,9 +16,16 @@
   </head>
   <body>
 
+    <h1>Stock</h1>
+
+    <!-- dropdown with model id -->
+    <!-- add and delete buttons for stock items -->
+
+    <h1>Vehicle</h1>
+
     <a href="modules/createVehicle.php">Create Vehicle Item</a>
-    <a href="../modules/updateVehicle.php">Update Vehicle Item</a>
-    <a href="../modules/deleteVehicle.php">Delete Vehicle Item</a>
+    <a href="modules/updateVehicle.php">Update Vehicle Item</a>
+    <a href="modules/deleteVehicle.php">Delete Vehicle Item</a>
 
     <?php
 

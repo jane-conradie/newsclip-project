@@ -48,15 +48,15 @@ class CrudController extends DatabaseConnection{
 
   }
 
-
   public function deleteStockItem()
   {
-
   }
 
-  public function updateVehicleItem()
+  public function updateVehicleItem($id, $make, $model, $price, $features)
   {
-
+    $sql = "CALL UpdateVehicleItem('".$id."','".$make."', '".$model."', '".$price."', '".$features."')";
+    $result = $this->openConnection()->query($sql);
+    return $result;
   }
 
   public function deleteVehicleItems()

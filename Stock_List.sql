@@ -90,4 +90,23 @@ BEGIN
     
 DELIMITER ; 
 
-select * from vehicle;
+DELIMITER $$
+
+CREATE PROCEDURE UpdateVehicleItem(
+IN id INT(10),
+IN make VARCHAR(25),
+IN model VARCHAR(25),
+IN price INT(8),
+IN features VARCHAR(500)
+)
+BEGIN
+	UPDATE Vehicle
+    SET 
+    make_name = make,
+    model_name = model,
+    vehicle_price = price,
+    vehicle_features = features
+	WHERE model_id=id;
+    END$$
+    
+DELIMITER ;
