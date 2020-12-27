@@ -24,7 +24,7 @@ class CrudController extends DatabaseConnection{
 
   public function createVehicleItem($make, $model, $price, $features)
   {
-      $sql = 'CALL CreateVehicleItem($make, $model,$price,$features)';
+      $sql = "CALL CreateVehicleItem('".$make."', '".$model."', '".$price."', '".$features."')";
       $result = $this->openConnection()->query($sql);
       return $result;
   }

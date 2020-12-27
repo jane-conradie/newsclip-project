@@ -75,11 +75,19 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE PROCEDURE CreateVehicleItem()
+CREATE PROCEDURE CreateVehicleItem(
+IN make VARCHAR(25),
+IN model VARCHAR(25),
+IN price INT(8),
+IN features VARCHAR(500)
+) 
+
 BEGIN
 	INSERT INTO Vehicle (make_name, model_name, vehicle_price, vehicle_features)
-	VALUES (make_name, model_name, vehicle_price, vehicle_features);
+	VALUES (make, model, price, features);
     
     END$$
     
 DELIMITER ; 
+
+select * from vehicle;
