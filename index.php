@@ -18,6 +18,23 @@
 
   </head>
   <body>
+
+    <nav class="navbar navbar-light navbar-expand-sm fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" name="button" data-toggle="collapse" data-target="#Navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mr-auto" href="index.html">Volkswagen</a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link"href="index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> Stock Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Modify Stock</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <?php
 
     $db = new CrudController();

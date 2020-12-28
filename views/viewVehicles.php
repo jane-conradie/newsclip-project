@@ -5,15 +5,17 @@ class ViewVehicles extends CrudController{
   public function showVehicleItems()
   {
     $data = $this->getVehicleItems();
-    foreach ($data as $item) {
-      print_r($item['model_id']." "
-              .$item['make_name']." "
-              .$item['model_name']." "
-              .$item['vehicle_price']." "
-              .$item['vehicle_features']."<br><br>");
-    }
-  }
 
+    while ($row = $data->fetch(PDO::FETCH_ASSOC)){
+        echo "".$row['model_id']." "
+            .$row['make_name']." "
+            .$row['model_name']." "
+            .$row['vehicle_price']." "
+            .$row['vehicle_features']."<br><br> "
+        ;
+       }
 }
+}
+
 
  ?>

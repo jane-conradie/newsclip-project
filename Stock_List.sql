@@ -14,9 +14,13 @@ vehicle_features VARCHAR(500) NOT NULL
 
 CREATE TABLE IF NOT EXISTS Stock (
 prod_id INT(10) PRIMARY KEY UNIQUE NOT NULL AUTO_INCREMENT,
-model_id INT(10),
-FOREIGN KEY (model_id) REFERENCES Vehicle(model_id)
+model_id INT(10)
 );
+
+ALTER TABLE Stock
+ADD FOREIGN KEY (model_id)
+REFERENCES Vehicle(model_id)
+ON DELETE CASCADE;
 
 DELIMITER $$
 
@@ -151,3 +155,8 @@ BEGIN
     END$$
     
 DELIMITER ;
+
+SELECT DISTINCT Stock.make_name, Stock.model_name
+FROM Stock
+INNER JOIN Vehicle 
+ON Stock.model_id = Vehicle.model_id;
