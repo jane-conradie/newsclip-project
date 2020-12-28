@@ -12,7 +12,14 @@ class CrudController extends DatabaseConnection{
   {
         $sql = 'CALL GetVehicles()';
         $result = $this->openConnection()->query($sql);
-        return $result;
+        $num_rows = $result->rowCount();
+
+        if ($num_rows > 0){
+          while ($row = $result->fetch(PDO::FETCH_ASSOC)){
+            $data[] = $row;
+          }
+          return $data;
+        }
   }
 
   public function createVehicleItem($make, $model, $price, $features)
