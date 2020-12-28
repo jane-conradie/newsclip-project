@@ -14,14 +14,22 @@ class ViewVehicles extends CrudController{
     foreach ($data as $item) {
     $i++;
       echo "<div class='accordion-group'>
-              <div class='accordion-heading'>
+
+              <div class='accordion-heading ml-auto'>
                 <a class='accordion-toggle btn' type='button' data-toggle='collapse' href='#collapse".$i."'>
                 <h2>".$item['make_name']."  ".$item['model_name']." </h2></a>
               </div>
               <div>
               <div id='collapse".$i."' class='accordion-body collapse'>
                 <div class='accordion-inner'>
-                ".$item['vehicle_price']." ".$item['vehicle_features']."<br><br>
+                <div class='row'>
+                  <div class='col-lg-6'>
+                  Features: ".$item['vehicle_features']." <br><br>
+                  </div>
+                  <div class='col-lg-6 text-lg-right'>
+                  Price: R".$item['vehicle_price']."
+                  </div>
+                </div>
                 </div>
               </div>
             </div>
