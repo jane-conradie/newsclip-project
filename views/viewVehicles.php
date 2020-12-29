@@ -10,6 +10,10 @@ class ViewVehicles extends CrudController{
     $i=0;
 
     foreach ($data as $item) {
+
+    $id = $item['model_id'];
+    $count = $this->countStockItems($id);
+
     $i++;
       echo "<div class='accordion-group'>
               <div class='accordion-heading ml-auto'>
@@ -26,8 +30,9 @@ class ViewVehicles extends CrudController{
                   Features: ".$item['vehicle_features']."
                   <br><br>
                   </div>
-                  <div class='col-lg-6 vehicle-details text-right'>
-                  Price: R".$item['vehicle_price']."
+                  <div class='col-lg-6 vehicle-details vehicle-right-text'>
+                  Price: R".$item['vehicle_price']." <br><br>
+                  Number of ".$item['make_name']." ".$item['model_name']." in stock: ".$count."
                   </div>
                 </div>
                 </div>

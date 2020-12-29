@@ -155,3 +155,18 @@ BEGIN
     END$$
     
 DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE CountStockItems(
+IN id INT(10)
+)
+BEGIN
+    SELECT *
+    FROM Stock
+    WHERE model_id = id;
+    
+    SELECT ROW_COUNT();
+    END$$
+    
+DELIMITER ;

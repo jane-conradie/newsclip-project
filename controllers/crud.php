@@ -72,6 +72,7 @@ class CrudController extends DatabaseConnection{
       $result = $this->openConnection()->query($sql);
       return $result;
     } catch (PDOException $e) {
+      //do not print error because Javascript alert will tell the user what is wrong
     }
   }
 
@@ -86,6 +87,15 @@ class CrudController extends DatabaseConnection{
       //do not print error because Javascript alert will tell the user what is wrong
     }
   }
+
+  public function countStockItems($id){
+    $sql = "CALL CountStockItems('".$id."')";
+    $result = $this->openConnection()->query($sql);
+    $num_rows = $result->rowCount();
+
+    return $num_rows;
+    }
+
 }
 
  ?>
