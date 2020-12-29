@@ -1,7 +1,5 @@
 <?php
 
-
-
 class ViewVehicles extends CrudController{
 
   public function showVehicleItems()
@@ -14,17 +12,19 @@ class ViewVehicles extends CrudController{
     foreach ($data as $item) {
     $i++;
       echo "<div class='accordion-group'>
-
               <div class='accordion-heading ml-auto'>
                 <a class='accordion-toggle btn' type='button' data-toggle='collapse' href='#collapse".$i."'>
-                <h2>".$item['make_name']."  ".$item['model_name']." </h2></a>
+                <h2 class='vehicle-heading'>".$item['make_name']."  ".$item['model_name']." </h2></a>
               </div>
               <div>
               <div id='collapse".$i."' class='accordion-body collapse'>
                 <div class='accordion-inner'>
                 <div class='row'>
                   <div class='col-lg-6'>
-                  Features: ".$item['vehicle_features']." <br><br>
+                  Model ID: ".$item['model_id']."
+                  <br><br>
+                  Features: ".$item['vehicle_features']."
+                  <br><br>
                   </div>
                   <div class='col-lg-6 text-lg-right'>
                   Price: R".$item['vehicle_price']."
@@ -33,11 +33,10 @@ class ViewVehicles extends CrudController{
                 </div>
               </div>
             </div>
-          </div>"
+          </div>
+          <br><br>"
       ;
-
     }
-
 }
 }
 

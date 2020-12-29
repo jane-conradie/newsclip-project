@@ -57,7 +57,9 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE PROCEDURE GetVehicles()
+CREATE PROCEDURE GetVehicles(
+IN id INT(10)
+)
 BEGIN
 	SELECT *
     FROM Vehicle;
@@ -156,7 +158,17 @@ BEGIN
     
 DELIMITER ;
 
-SELECT DISTINCT Stock.make_name, Stock.model_name
-FROM Stock
-INNER JOIN Vehicle 
-ON Stock.model_id = Vehicle.model_id;
+DELIMITER $$
+
+CREATE PROCEDURE CalculateStock(
+IN id INT(10)
+)
+BEGIN
+   SELECT Stock.model_id, COUNT(prod_id) AS Total
+	FROM Stock
+	WHERE model_id = model_id;
+    END$$
+    
+DELIMITER ;
+
+

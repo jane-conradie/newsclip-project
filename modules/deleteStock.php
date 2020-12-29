@@ -25,9 +25,9 @@
         <a class="navbar-brand ml-auto" href="../index.php"><img src="../models/logo.png" alt="logo"> </img></a>
         <div class="collapse navbar-collapse" id="Navbar">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link"href="../index.php"><span class="fa fa-home fa-lg"></span> Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="../stock.php"><span class="fa fa-info fa-lg"></span> Stock Overview</a></li>
-            <li class="nav-item"><a class="nav-link" href="../modify.php"><span class="fa fa-list fa-lg"></span> Modify Stock</a></li>
+            <li class="nav-item"><a class="nav-link"href="../index.php"> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../stock.php"> Stock Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="../modify.php"> Modify Stock</a></li>
           </ul>
         </div>
       </div>

@@ -10,30 +10,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+      <title>Home</title>
   </head>
   <body>
 
-    <nav class="navbar navbar-light navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-light navbar-expand-sm">
       <div class="container">
         <button class="navbar-toggler" type="button" name="button" data-toggle="collapse" data-target="#Navbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand mr-auto" href="index.html">Volkswagen</a>
+        <a class="navbar-brand ml-auto" href="index.php"><img src="models/logo.png" alt="logo"> </img></a>
         <div class="collapse navbar-collapse" id="Navbar">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a class="nav-link"href="index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> Stock Overview</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Modify Stock</a></li>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link"href="index.php"> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="stock.php"> Stock Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="modify.php"> Modify Stock</a></li>
           </ul>
         </div>
       </div>
     </nav>
+    <br>
 
     <?php
 
@@ -42,34 +42,55 @@
     $db->closeConnection($db);
 
      ?>
+
      <div class="container">
-       <div class="sidenav">
-         <img class="nav-logo" src="models/logo.png" alt="logo">
-         <div class="sidenav-links">
-           <a href="stock.php">Stock Overview</a>
-           <a href="modify.php">Modify Stock</a>
-         </div>
-         <div class="footer-icons">
-           <img src="models/fb.png" alt="fb">
-           <img src="models/li.png" alt="fb">
-           <img src="models/tw.png" alt="fb">
+       <div class="row home-header">
+         <div class="col-12 text-center">
+           <h1>Welcome</h1>
          </div>
        </div>
-     <div class="welcome">
-       <h1>Welcome!</h1>
+       <div class="container home-container">
+         <a href="stock.php" class="btn" role="button">
+         <div class="row content-row">
+           <div class="col-lg-6 col-md-12">
+            <h2 class="home-heading">View Stock</h2>
+           </div>
+           <div class="col-lg-6 col-md-12">
+             <img class="home-icon img-fluid" src="models/check-list.png" alt="check-list">
+           </div>
+         </div>
+         </a>
+         <br>
+          <a href="modify.php" class="btn" role="button">
+         <div class="row content-row ">
+           <div class="col-lg-6 col-md-12">
+            <img class="home-icon" src="models/edit-list.png" alt="edit-list">
+           </div>
+           <div class="col-lg-6 col-md-12">
+            <h2 class="home-heading">Modify Stock</h2>
+           </div>
+         </div>
+         </a>
+       </div>
      </div>
-     <div class="home-links">
-       <a href="#"></a>
-     </div>
-   </div>
 
+     <footer class="footer" id="footer">
+       <hr>
+         <div class="container">
 
-        <a href="stock.php" role="button" class="btn">View Stock</a>
-
-
-        <a href="modify.php" role="button" class="btn">Modify Stock</a>
-
-
+           <br>
+            <div class="row">
+                 <div class="col-lg-6 col-md-12 text-lg-left text-md-center">
+                     <p>© Copyright 2020 Newsclip</p>
+                 </div>
+                 <div class="col-lg-6 col-md-12 text-lg-right text-md-center">
+                   <img src="models/fb.png" alt="fb">
+                   <img src="models/li.png" alt="li">
+                   <img src="models/tw.png" alt="tw">
+                 </div>
+            </div>
+         </div>
+     </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
