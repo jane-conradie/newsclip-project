@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 
+    <script type="text/javascript" src="../scripts/script.js"></script>
+
     <title>Delete Vehicle</title>
   </head>
   <body>
@@ -44,7 +46,7 @@
         <div class="col-lg-12 text-center">
           <?php
 
-            echo "<form action='' method='post'>
+            echo "<form action='' method='post' onsubmit='deleteVehicleValidation()' id='delete-Vehicle-Form'>
               <label class='form-group' for='id'>Model ID to delete: </label>
               <input class='form-group' type='text' name='id' id='id' placeholder='id'><br><br>
               <input class='form-group btn btn-dark' type='submit' name='submit' value='Delete Vehicle'>

@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+    
+    <script type="text/javascript" src="../scripts/script.js"></script>
 
     <title>Create Stock</title>
   </head>
@@ -43,16 +45,16 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <?php
-          echo "<form action='' method='post'>
+          echo "<form action='' id='add-Stock-Form' method='post' onsubmit='addStockValidation()'>
             <label for='id'>Model ID: </label>
             <input type='text' name='id' id='id' placeholder='id'><br><br>
             <input class='btn btn-dark' type='submit' name='submit' value='Add Stock'>
           </form>";
 
           //calls on createStockItem controller to insert the above form data into the database
-          if (isset($_POST['submit'])){
-            $id = $_POST['id'];
-            $query=$conn->createStockItem($id);
+           if (isset($_POST['submit'])){
+             $id = $_POST['id'];
+             $query=$conn->createStockItem($id);
             }
            ?>
 

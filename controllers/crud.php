@@ -21,8 +21,11 @@ class CrudController extends DatabaseConnection{
   public function createVehicleItem($make, $model, $price, $features)
   {
       $sql = "CALL CreateVehicleItem('".$make."', '".$model."', '".$price."', '".$features."')";
-      $result = $this->openConnection()->query($sql);
-      return $result;
+      try {
+        $result = $this->openConnection()->query($sql);
+        return $result;
+      } catch (\Exception $e) {
+      }
   }
 
   public function getStockItems()
@@ -42,15 +45,23 @@ class CrudController extends DatabaseConnection{
   public function createStockItem($id)
   {
     $sql = "CALL AddStock('".$id."')";
-    $result = $this->openConnection()->query($sql);
-    return $result;
+    try {
+      $result = $this->openConnection()->query($sql);
+      return $result;
+    } catch (PDOException $e) {
+      //do not print error because Javascript alert will tell the user what is wrong
+    }
   }
 
   public function deleteStockItem($id)
   {
     $sql = "CALL RemoveStock('".$id."')";
-    $result = $this->openConnection()->query($sql);
-    return $result;
+    try {
+      $result = $this->openConnection()->query($sql);
+      return $result;
+    } catch (PDOException $e) {
+      //do not print error because Javascript alert will tell the user what is wrong
+    }
   }
 
   public function updateVehicleItem($id, $make, $model, $price, $features)
@@ -63,10 +74,14 @@ class CrudController extends DatabaseConnection{
   public function deleteVehicleItem($id)
   {
     $sql = "CALL DeleteVehicleItem('".$id."')";
-    $result = $this->openConnection()->query($sql);
-    return $result;
-  }
 
+    try {
+      $result = $this->openConnection()->query($sql);
+      return $result;
+    } catch (PDOException $e) {
+      //do not print error because Javascript alert will tell the user what is wrong
+    }
+  }
 }
 
  ?>
