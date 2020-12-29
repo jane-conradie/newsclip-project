@@ -24,7 +24,8 @@ class CrudController extends DatabaseConnection{
       try {
         $result = $this->openConnection()->query($sql);
         return $result;
-      } catch (\Exception $e) {
+      } catch (PDOException $e) {
+        //do not print error because Javascript alert will tell the user what is wrong
       }
   }
 
@@ -67,8 +68,11 @@ class CrudController extends DatabaseConnection{
   public function updateVehicleItem($id, $make, $model, $price, $features)
   {
     $sql = "CALL UpdateVehicleItem('".$id."','".$make."', '".$model."', '".$price."', '".$features."')";
-    $result = $this->openConnection()->query($sql);
-    return $result;
+    try {
+      $result = $this->openConnection()->query($sql);
+      return $result;
+    } catch (PDOException $e) {
+    }
   }
 
   public function deleteVehicleItem($id)

@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 
+    <script type="text/javascript" src="../scripts/script.js"></script>
+
     <title>Update Vehicle Details</title>
   </head>
   <body>
@@ -43,7 +45,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <?php
-            echo "<form action='' method='post'>
+            echo "<form action='' method='post' id='update-Vehicle-Form' onsubmit='return updateVehicleValidation()'>
               <label class='form-group' for='id'>Vehicle Model ID:</label>
               <input class='form-group' type='text' name='id' id='id' placeholder='ID'><br><br>
               <label class='form-group' for='make'>Make:</label>

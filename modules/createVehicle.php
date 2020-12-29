@@ -45,7 +45,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <?php
-            echo "<form action='' method='post' onsubmit='createVehicleValidation()' id='create-Vehicle-Form'>
+            echo "<form action='' method='post' onsubmit='return createVehicleValidation()' id='create-Vehicle-Form'>
               <label class='form-group' for='make'>Make:</label>
               <input class='form-group' type='text' name='make' id='make' placeholder='Make'><br><br>
               <label class='form-group' for='model'>Model:</label>

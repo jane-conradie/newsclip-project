@@ -45,7 +45,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <?php
-            echo "<form action='' method='post' id='delete-Stock-Form' onsubmit='deleteStockValidation()'>
+            echo "<form action='' method='post' id='delete-Stock-Form' onsubmit='return deleteStockValidation()'>
               <label for='id'>Model ID: </label>
               <input type='text' name='id' id='id' placeholder='id'><br><br>
               <input class='btn btn-dark' type='submit' name='submit' value='Remove Stock'>

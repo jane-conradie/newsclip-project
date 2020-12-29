@@ -46,7 +46,7 @@
         <div class="col-lg-12 text-center">
           <?php
 
-            echo "<form action='' method='post' onsubmit='deleteVehicleValidation()' id='delete-Vehicle-Form'>
+            echo "<form action='' method='post' onsubmit='return deleteVehicleValidation()' id='delete-Vehicle-Form'>
               <label class='form-group' for='id'>Model ID to delete: </label>
               <input class='form-group' type='text' name='id' id='id' placeholder='id'><br><br>
               <input class='form-group btn btn-dark' type='submit' name='submit' value='Delete Vehicle'>

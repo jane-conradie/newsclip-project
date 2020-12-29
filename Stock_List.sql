@@ -57,9 +57,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE PROCEDURE GetVehicles(
-IN id INT(10)
-)
+CREATE PROCEDURE GetVehicles()
 BEGIN
 	SELECT *
     FROM Vehicle;
@@ -157,18 +155,3 @@ BEGIN
     END$$
     
 DELIMITER ;
-
-DELIMITER $$
-
-CREATE PROCEDURE CalculateStock(
-IN id INT(10)
-)
-BEGIN
-   SELECT Stock.model_id, COUNT(prod_id) AS Total
-	FROM Stock
-	WHERE model_id = model_id;
-    END$$
-    
-DELIMITER ;
-
-
