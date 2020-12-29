@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+
+    <title>Update Vehicle Details</title>
   </head>
   <body>
     <nav class="navbar navbar-light navbar-expand-sm">
@@ -41,29 +43,30 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <?php
-          echo "<form action='' method='post'>
-            <label class='form-group' for='id'>Vehicle Model ID:</label>
-            <input class='form-group' type='text' name='id' id='id' placeholder='ID'><br><br>
-            <label class='form-group' for='make'>Make:</label>
-            <input class='form-group' type='text' name='make' id='make' placeholder='Make'><br><br>
-            <label class='form-group' for='model'>Model:</label>
-            <input class='form-group' type='text' name='model' id='model' placeholder='Model'><br><br>
-            <label class='form-group' for='price'>Price:</label>
-            <input class='form-group' type='text' name='price' id='price' placeholder='R'><br><br>
-            <label class='form-group' for='features'>Features:</label>
-            <input class='form-group' type='text' name='features' id='features' placeholder='Features'><br><br>
-            <input class='form-group btn btn-dark' type='submit' name='submit' value='Update Details'>
-          </form>";
+            echo "<form action='' method='post'>
+              <label class='form-group' for='id'>Vehicle Model ID:</label>
+              <input class='form-group' type='text' name='id' id='id' placeholder='ID'><br><br>
+              <label class='form-group' for='make'>Make:</label>
+              <input class='form-group' type='text' name='make' id='make' placeholder='Make'><br><br>
+              <label class='form-group' for='model'>Model:</label>
+              <input class='form-group' type='text' name='model' id='model' placeholder='Model'><br><br>
+              <label class='form-group' for='price'>Price:</label>
+              <input class='form-group' type='text' name='price' id='price' placeholder='R'><br><br>
+              <label class='form-group' for='features'>Features:</label>
+              <input class='form-group' type='text' name='features' id='features' placeholder='Features'><br><br>
+              <input class='form-group btn btn-dark' type='submit' name='submit' value='Update Details'>
+              </form>";
 
-          if (isset($_POST['submit'])){
-            $id = $_POST['id'];
-            $make = $_POST['make'];
-            $model = $_POST['model'];
-            $price = $_POST['price'];
-            $features = $_POST['features'];
+              //calls on updateVehicleItem controller to update all the fields in the table with the data from the above form
+              if (isset($_POST['submit'])){
+                $id = $_POST['id'];
+                $make = $_POST['make'];
+                $model = $_POST['model'];
+                $price = $_POST['price'];
+                $features = $_POST['features'];
 
-            $query=$conn->updateVehicleItem($id,$make, $model, $price, $features);
-        }
+                $query=$conn->updateVehicleItem($id,$make, $model, $price, $features);
+              }
            ?>
 
         </div>
@@ -86,10 +89,8 @@
     </div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 </body>
 </html>

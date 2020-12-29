@@ -1,7 +1,7 @@
 <?php
 
 class ViewVehicles extends CrudController{
-
+  //generates accordions and populates them with data from the database
   public function showVehicleItems()
   {
     $data = $this->getVehicleItems();

@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+
+    <title>Delete Vehicle</title>
   </head>
   <body>
     <nav class="navbar navbar-light navbar-expand-sm">
@@ -36,8 +38,8 @@
 
     <div class="container">
     <div class="card text-center" style="padding:15px;">
-        <h3>Delete Vehicle</h3>
-        </div><br><br>
+      <h3>Delete Vehicle</h3>
+      </div><br><br>
       <div class="row">
         <div class="col-lg-12 text-center">
           <?php
@@ -46,13 +48,14 @@
               <label class='form-group' for='id'>Model ID to delete: </label>
               <input class='form-group' type='text' name='id' id='id' placeholder='id'><br><br>
               <input class='form-group btn btn-dark' type='submit' name='submit' value='Delete Vehicle'>
-            </form>";
+              </form>";
 
+            //calls on deleteVehicleItem controller to delete a specific vehicle item
             if (isset($_POST['submit'])){
               $id = $_POST['id'];
               $query=$conn->deleteVehicleItem($id);
-          }
-           ?>
+            }
+          ?>
 
         </div>
       </div>

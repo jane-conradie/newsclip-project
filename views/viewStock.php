@@ -2,6 +2,7 @@
 
 class ViewStock extends CrudController{
 
+  //generates a table and populates it with the data from the database
   public function showStockItems()
   {
     $data = $this->getStockItems();

@@ -46,10 +46,6 @@
         <div class="col-lg-4 text-right">
           <a href="modules/createStock.php" role="button" class="btn btn-dark stock-btn">Add Stock</a>
           <a href="modules/deleteStock.php" role="button" class="btn btn-dark stock-btn">Delete Stock</a>
-          <!-- <button type="button" class="btn btn-dark m-1 float-right" data-toggle="modal" data-target="#addStockModal"> -->
-          <!-- <i class="fa fa-plus"></i> Add Stock</button> -->
-          <!-- <button type="button" class="btn btn-dark m-1 float-right" data-toggle="modal" data-target="#removeStockModal"> -->
-          <!-- <i class="fa fa-plus"></i> Remove Stock</button> -->
         </div>
       </div><br>
     </div>
@@ -60,6 +56,7 @@
           <div class="table-responsive" id="tableData">
             <?php
 
+            // calling function to display stock data
             $stock = new ViewStock();
             $stock->showStockItems();
             $stock->closeConnection($stock);
@@ -89,54 +86,6 @@
       </div>
     </div>
 
-    <!-- <div class="modal" id="addStockModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Add New Stock Item</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            <form id="addStockForm" action="controllers/crud.php/createStockItem()">
-              <div class="form-group">
-                <label for="id">Model ID: </label>
-                <input type="text" class="form-control" name="id" placeholder="Enter id" required="">
-              </div>
-              <hr>
-              <div class="form-group float-right">
-                <button type="submit" class="btn btn-success" id="submit">Submit</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal" id="removeStockModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Remove Stock Item</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            <form id="formData" >
-              <div class="form-group">
-                <label for="id">Model ID: </label>
-                <input type="text" class="form-control" name="id" placeholder="Enter id" required="">
-              </div>
-              <hr>
-              <div class="form-group float-right">
-                <button type="submit" class="btn btn-success" id="submit">Submit</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <footer class="footer" id="footer">
         <div class="container">
           <br>
@@ -153,7 +102,6 @@
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

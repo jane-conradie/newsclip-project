@@ -1,5 +1,8 @@
 <?php
 
+//CrudController contains all code needed for data processing and communication. Any data from the database that is needed gets fetched from here.
+//All data is processed via stored procedures contained in the database.
+
 class CrudController extends DatabaseConnection{
 
   public function populateDatabase()
