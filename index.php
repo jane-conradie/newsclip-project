@@ -52,7 +52,7 @@
          </div>
        </div>
        <div class="container home-container">
-         <a href="stock.php" class="btn" role="button">
+         <a href="stock.php" class="btn home-btn" role="button">
          <div class="row content-row">
            <div class="col-lg-6 col-md-12">
             <h2 class="home-heading">View Stock</h2>
@@ -62,8 +62,8 @@
            </div>
          </div>
          </a>
-         <br>
-          <a href="modify.php" class="btn" role="button">
+         <br><br>
+          <a href="modify.php" class="btn home-btn" role="button">
          <div class="row content-row ">
            <div class="col-lg-6 col-md-12">
             <img class="home-icon" src="models/edit-list.png" alt="edit-list">

@@ -20,13 +20,13 @@ class ViewVehicles extends CrudController{
               <div id='collapse".$i."' class='accordion-body collapse'>
                 <div class='accordion-inner'>
                 <div class='row'>
-                  <div class='col-lg-6'>
+                  <div class='col-lg-5 vehicle-details'>
                   Model ID: ".$item['model_id']."
                   <br><br>
                   Features: ".$item['vehicle_features']."
                   <br><br>
                   </div>
-                  <div class='col-lg-6 text-lg-right'>
+                  <div class='col-lg-6 vehicle-details text-right'>
                   Price: R".$item['vehicle_price']."
                   </div>
                 </div>

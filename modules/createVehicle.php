@@ -46,15 +46,16 @@
         <div class="col-lg-12 text-center">
           <?php
             echo "<form action='' method='post' onsubmit='return createVehicleValidation()' id='create-Vehicle-Form'>
-              <label class='form-group' for='make'>Make:</label>
-              <input class='form-group' type='text' name='make' id='make' placeholder='Make'><br><br>
-              <label class='form-group' for='model'>Model:</label>
-              <input class='form-group' type='text' name='model' id='model' placeholder='Model'><br><br>
-              <label class='form-group' for='price'>Price:</label>
-              <input class='form-group' type='text' name='price' id='price' placeholder='R'><br><br>
-              <label class='form-group' for='features'>Features:</label>
-              <input class='form-group' type='text' name='features' id='features' placeholder='Features'><br><br>
-              <input class='btn btn-dark form-group' type='submit' name='submit' value='Create New'>
+              <label for='make'>Make:</label>
+              <input type='text' name='make' id='make' placeholder='Make'><br><br>
+              <label for='model'>Model:</label>
+              <input type='text' name='model' id='model' placeholder='Model'><br><br>
+              <label for='price'>Price:</label>
+              <input type='text' name='price' id='price' placeholder='R'><br><br>
+              <label for='features'>Features:</label>
+              <input type='text' name='features' id='features' placeholder='Features'><br><br>
+              <a class='btn btn-dark form-btn' href='../modify.php'>Back</a>
+              <input class='btn btn-dark form-btn' type='submit' name='submit' value='Create New'>
               </form>";
 
               //calls on createVehicleItem controller to insert the above form data into the database

@@ -8,6 +8,12 @@ html {
   min-height: 100%;
 }
 
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: left;
+}
+
 .home-header{
   padding-top: 20px;
   padding-bottom: 20px;
@@ -41,6 +47,20 @@ html {
   margin: 5px;
 }
 
+.vehicle-heading{
+  text-align: left;
+}
+
+.form-btn{
+  margin-left: 10px;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: hidden!important;
+}
+
 #footer {
   position: absolute;
   bottom: 0;
@@ -48,14 +68,19 @@ html {
   height: 40px;
 }
 
-label {
-  display: inline-block;
-  width: 140px;
-  text-align: left;
+.accordion-group:hover{
+  padding-left: 50px;
 }
 
-.vehicle-heading{
-  text-align: left;
+.content-row:hover{
+
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.vehicle-details{
+  margin-left: 15px;
 }
 
 @media (max-width: 373px) {
@@ -70,6 +95,5 @@ label {
     padding-left: 60px;
     margin-right: 0;
   }
-
 
 }

@@ -48,7 +48,8 @@
             echo "<form action='' method='post' id='delete-Stock-Form' onsubmit='return deleteStockValidation()'>
               <label for='id'>Model ID: </label>
               <input type='text' name='id' id='id' placeholder='id'><br><br>
-              <input class='btn btn-dark' type='submit' name='submit' value='Remove Stock'>
+              <a class='btn btn-dark form-btn' href='../modify.php'>Back</a>
+              <input class='btn btn-dark form-btn' type='submit' name='submit' value='Remove Stock'>
               </form>";
 
               //calls on deleteStockItem controller to delete a specific stock item

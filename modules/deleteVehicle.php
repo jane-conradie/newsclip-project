@@ -47,9 +47,10 @@
           <?php
 
             echo "<form action='' method='post' onsubmit='return deleteVehicleValidation()' id='delete-Vehicle-Form'>
-              <label class='form-group' for='id'>Model ID to delete: </label>
-              <input class='form-group' type='text' name='id' id='id' placeholder='id'><br><br>
-              <input class='form-group btn btn-dark' type='submit' name='submit' value='Delete Vehicle'>
+              <label for='id'>Model ID to delete: </label>
+              <input type='text' name='id' id='id' placeholder='id'> <br><br>
+              <a class='btn btn-dark form-btn' href='../modify.php'>Back</a>
+              <input class='form-btn btn btn-dark' type='submit' name='submit' value='Delete Vehicle'>
               </form>";
 
             //calls on deleteVehicleItem controller to delete a specific vehicle item

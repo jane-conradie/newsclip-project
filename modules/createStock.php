@@ -48,7 +48,8 @@
           echo "<form action='' id='add-Stock-Form' method='post' onsubmit='return addStockValidation()'>
             <label for='id'>Model ID: </label>
             <input type='text' name='id' id='id' placeholder='id'><br><br>
-            <input class='btn btn-dark' type='submit' name='submit' value='Add Stock'>
+            <a class='btn btn-dark form-btn' href='../modify.php'>Back</a>
+            <input class='btn btn-dark form-btn' type='submit' name='submit' value='Add Stock'>
           </form>";
 
           //calls on createStockItem controller to insert the above form data into the database

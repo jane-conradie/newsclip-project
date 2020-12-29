@@ -46,17 +46,18 @@
         <div class="col-lg-12 text-center">
           <?php
             echo "<form action='' method='post' id='update-Vehicle-Form' onsubmit='return updateVehicleValidation()'>
-              <label class='form-group' for='id'>Vehicle Model ID:</label>
-              <input class='form-group' type='text' name='id' id='id' placeholder='ID'><br><br>
-              <label class='form-group' for='make'>Make:</label>
-              <input class='form-group' type='text' name='make' id='make' placeholder='Make'><br><br>
-              <label class='form-group' for='model'>Model:</label>
-              <input class='form-group' type='text' name='model' id='model' placeholder='Model'><br><br>
-              <label class='form-group' for='price'>Price:</label>
-              <input class='form-group' type='text' name='price' id='price' placeholder='R'><br><br>
-              <label class='form-group' for='features'>Features:</label>
-              <input class='form-group' type='text' name='features' id='features' placeholder='Features'><br><br>
-              <input class='form-group btn btn-dark' type='submit' name='submit' value='Update Details'>
+              <label for='id'>Vehicle Model ID:</label>
+              <input type='text' name='id' id='id' placeholder='ID'><br><br>
+              <label for='make'>Make:</label>
+              <input type='text' name='make' id='make' placeholder='Make'><br><br>
+              <label for='model'>Model:</label>
+              <input type='text' name='model' id='model' placeholder='Model'><br><br>
+              <label for='price'>Price:</label>
+              <input type='text' name='price' id='price' placeholder='R'><br><br>
+              <label for='features'>Features:</label>
+              <input type='text' name='features' id='features' placeholder='Features'><br><br>
+              <a class='btn btn-dark form-btn' href='../modify.php'>Back</a>
+              <input class='btn btn-dark form-btn' type='submit' name='submit' value='Update Details'>
               </form>";
 
               //calls on updateVehicleItem controller to update all the fields in the table with the data from the above form
